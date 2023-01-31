@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest",
     "dotenv": "bash -c 'mv .env_example .env'",
-    "start": "nodemon --watch src -e ts --exec tsx app.ts"
+    "start": "tsx app.ts"
   },
   "dependencies": {
     "axios": "^1.2.6",
