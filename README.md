@@ -1,5 +1,5 @@
-# ts-node 模板
-快速搭建node服务
+# Live Parser
+命令行抖音直播数据抓取工具
 ### 🚀SetUp
 
 ```sh
