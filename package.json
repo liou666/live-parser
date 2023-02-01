@@ -1,5 +1,5 @@
 {
-  "name": "live-parser",
+  "name": "@liou666/live-parser",
   "type": "module",
   "version": "1.1.0",
   "description": "douyin live parser",
