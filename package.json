@@ -26,7 +26,9 @@
   "scripts": {
     "test": "jest",
     "dev": "node bin",
-    "build": "tsup && cp ./src/proto/dy.proto ./dist"
+    "build": "tsup && cp ./src/proto/dy.proto ./dist",
+    "release:preview": "standard-version --dry-run",
+    "release": "standard-version && git push --follow-tags origin main && npm publish"
   },
   "dependencies": {
     "axios": "^1.2.6",
