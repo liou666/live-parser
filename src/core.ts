@@ -46,7 +46,7 @@ export async function incoming(data: any, ws: WebSocket) {
           unPackwebcastChatMessage(data)
           break
         case 'WebcastMatchAgainstScoreMessage':
-          unPackMatchAgainstScoreMessage(data)
+          // unPackMatchAgainstScoreMessage(data)
           break
         case 'WebcastLikeMessage':
           unPackWebcastLikeMessage(data)
@@ -61,21 +61,21 @@ export async function incoming(data: any, ws: WebSocket) {
           unPackWebcastSocialMessage(data)
           break
         case 'WebcastRoomUserSeqMessage':
-          unPackWebcastRoomUserSeqMessage(data)
+          // unPackWebcastRoomUserSeqMessage(data)
           break
         case 'WebcastUpdateFanTicketMessage':
-          unPackWebcastUpdateFanTicketMessage(data)
+          // unPackWebcastUpdateFanTicketMessage(data)
           break
         case 'WebcastCommonTextMessage':
-          unPackWebcastCommonTextMessage(data)
+          // unPackWebcastCommonTextMessage(data)
           break
         default:
-          logger.info(msg.method)
+          // logger.info(msg.method)
           break
       }
     }
     catch (error) {
-      console.error(error)
+      // console.error(error)
     }
   }
 }
