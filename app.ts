@@ -1,12 +1,5 @@
-import dotenv from 'dotenv'
-import startWebsocket from './src/ws'
 import { logger } from './src/utils'
-
-dotenv.config()
-const { LIVE_ID } = process.env
-
-// run
-startWebsocket(LIVE_ID!)
+export { default } from './src/ws'
 
 // listen system sign
 process.on('SIGINT', () => {

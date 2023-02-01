@@ -1,7 +1,7 @@
 import type WebSocket from 'ws'
 import axios from 'axios'
 
-import { logger, tools } from './utils'
+import { tools } from './utils'
 import { PushFrame, Response } from './proto'
 import {
   unPackMatchAgainstScoreMessage,
