@@ -1,8 +1,11 @@
 import path from 'path'
 import protobuf from 'protobufjs'
+import { getCurrentPath } from '@/utils/tools'
+
+const { __dirname__ } = getCurrentPath(import.meta.url)
 
 // 获取proto路径
-const proto = path.resolve('.', import.meta.url.slice(7), '..', 'dy.proto')
+const proto = path.resolve(__dirname__, 'dy.proto')
 
 export const root = await protobuf.load(proto)
 export const PushFrame = root.lookupType('douyin.PushFrame')
