@@ -1,7 +1,7 @@
 {
   "name": "@liou666/live-parser",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "douyin live parser",
   "author": "Liou",
   "license": "MIT",
@@ -47,7 +47,6 @@
     "dotenv": "^16.0.3",
     "eslint": "^8.26.0",
     "jest": "^29.2.2",
-
     "nodemon": "^2.0.20",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.0.3",
