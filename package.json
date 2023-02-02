@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "node bin",
+    "dev": "tsx app.ts",
     "build": "tsup && cp ./src/proto/dy.proto ./dist",
     "release:preview": "standard-version --dry-run",
     "release": "standard-version && git push --follow-tags origin main && npm publish"
@@ -34,7 +34,6 @@
     "axios": "^1.2.6",
     "colors": "^1.4.0",
     "commander": "^10.0.0",
-    "dotenv": "^16.0.3",
     "enquirer": "^2.3.6",
     "node-fetch": "^3.3.0",
     "protobufjs": "^7.2.0",
@@ -45,8 +44,10 @@
     "@types/jest": "^29.2.1",
     "@types/node": "^18.11.8",
     "@types/ws": "^8.5.4",
+    "dotenv": "^16.0.3",
     "eslint": "^8.26.0",
     "jest": "^29.2.2",
+
     "nodemon": "^2.0.20",
     "standard-version": "^9.5.0",
     "ts-jest": "^29.0.3",
