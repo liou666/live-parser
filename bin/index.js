@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import enquirer from 'enquirer'
-import startWebsocket from '../dist/app.js'
+import startWebsocket from '../dist/index.js'
 const { prompt } = enquirer
 const response = await prompt({
   type: 'input',
