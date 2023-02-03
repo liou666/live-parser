@@ -1,7 +1,7 @@
 {
   "name": "@liou666/live-parser",
   "type": "module",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "douyin live parser",
   "author": "Liou",
   "license": "MIT",
