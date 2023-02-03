@@ -1,7 +1,5 @@
 import WebSocket from 'ws'
-
-import { logger } from './utils'
-import { incoming, parseLiveUrl } from './core'
+import type { ParseResult } from './parse'
 
 export interface WsEents{
   onopen: ((event: WebSocket.Event) => void) | null
@@ -10,8 +8,8 @@ export interface WsEents{
   onmessage: ((event: WebSocket.MessageEvent) => void) | null
 }
 
-export const initWsConnect = async (liveId: string, events?: WsEents) => {
-  const { liveRoomId, ttwid } = await parseLiveUrl(liveId)
+const initWsConnect = async (info: Pick<ParseResult, 'liveRoomId' | 'ttwid'>, events?: WsEents) => {
+  const { liveRoomId, ttwid } = info
   const url = `wss://webcast3-ws-web-hl.douyin.com/webcast/im/push/v2/?app_name=douyin_web&version_code=180800&webcast_sdk_version=1.3.0&update_version_code=1.3.0&compress=gzip&internal_ext=internal_src:dim|wss_push_room_id:${liveRoomId}|wss_push_did:${liveRoomId}|dim_log_id:2022122306295965382308B5DCD45D07F8|fetch_time:1671748199438|seq:1|wss_info:0-1671748199438-0-0|wrds_kvs:WebcastRoomRankMessage-1671748147622091132_WebcastRoomStatsMessage-1671748195537766499&cursor=t-1671748199438_r-1_d-1_u-1_h-1&host=https://live.douyin.com&aid=6383&live_id=1&did_rule=3&debug=false&endpoint=live_pc&support_wrds=1&im_path=/webcast/im/fetch/&device_platform=web&cookie_enabled=true&screen_width=1440&screen_height=900&browser_language=zh&browser_platform=MacIntel&browser_name=Mozilla&browser_version=5.0%20(Macintosh;%20Intel%20Mac%20OS%20X%2010_15_7)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/108.0.0.0%20Safari/537.36&browser_online=true&tz_name=Asia/Shanghai&identity=audience&room_id=${liveRoomId}&heartbeatDuration=0`
   const ws = new WebSocket(url, {
     headers: {
@@ -28,18 +26,4 @@ export const initWsConnect = async (liveId: string, events?: WsEents) => {
   return ws
 }
 
-const startWebsocket = async (liveId: string) => {
-  const ws = await initWsConnect(liveId)
-
-  ws.binaryType = 'arraybuffer'
-
-  ws.onopen = () => logger.info('connected')
-
-  ws.onclose = () => logger.warn('disconnected')
-
-  ws.onerror = err => logger.error(String(err))
-
-  ws.onmessage = data => incoming(data, ws)
-}
-
-export default startWebsocket
+export default initWsConnect
