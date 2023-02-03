@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/liou666/live-parser/compare/v1.1.3...v1.2.0) (2023-02-03)
+
+
+### Features
+
+* improve type ([03a9ad0](https://github.com/liou666/live-parser/commit/03a9ad0b8edafa70177bca58d3cb73f1c2f16f36))
+
 ### [1.1.3](https://github.com/liou666/live-parser/compare/v1.1.2...v1.1.3) (2023-02-02)
 
 

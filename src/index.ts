@@ -1,5 +1,5 @@
 import { logger } from './utils'
-export { default } from './ws'
+export { default } from './run'
 
 // listen system sign
 process.on('SIGINT', () => {
