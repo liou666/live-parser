@@ -1,5 +1,5 @@
+import { heartbeat, incoming, initWsConnect, parseLiveUrl } from './core'
 import { logger } from './utils'
-import { incoming, initWsConnect, parseLiveUrl } from './core'
 
 import {
   handleChatMessage,
@@ -16,13 +16,24 @@ import {
 const startWebsocket = async (liveId: string) => {
   const { ttwid, liveRoomId } = await parseLiveUrl(liveId)
 
+  //  每10秒发送一次心跳，保持服务器持续连接
+  let timer: NodeJS.Timer
+
   const ws = await initWsConnect({ ttwid, liveRoomId })
 
   ws.binaryType = 'arraybuffer'
 
-  ws.onopen = () => logger.info('connected')
+  ws.onopen = () => {
+    timer = setInterval(() => {
+      heartbeat(ws)
+    }, 10000)
+    logger.info('connected')
+  }
 
-  ws.onclose = () => logger.warn('disconnected')
+  ws.onclose = () => {
+    clearInterval(timer)
+    logger.warn('disconnected')
+  }
 
   ws.onerror = err => logger.error(String(err))
 
