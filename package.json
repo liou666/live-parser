@@ -17,7 +17,7 @@
     "dev": "tsx app.ts",
     "release:cli": "pnpm run --filter @liou666/live-parser release",
     "release:core": "pnpm run --filter @liou666/live-parser-core release",
-    "release": "pnpm release:cli && pnpm release:core && git reset --hard HEAD^^ "
+    "release": "pnpm release:cli && pnpm release:core && git reset HEAD^^ && git add . && git commit -m'chore(release): version'"
   },
   "dependencies": {
     "@liou666/live-parser": "workspace:*",
