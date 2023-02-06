@@ -1,4 +1,4 @@
-#  📺 Live Parser 
+#  📺 Live Parser Core
 Command line Douyin live room scraper by Nodejs
 
 [![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url]
@@ -61,7 +61,7 @@ const startWebsocket = async (liveId: string) => {
   })
 }
 
-export default startWebsocket
+startWebsocket('xxxx')
 
 ```
 
