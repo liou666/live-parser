@@ -43,7 +43,7 @@ importers:
 
   packages/cli:
     specifiers:
-      '@liou666/live-parser-core': workspace:*
+      '@liou666/live-parser-core': '*'
       colors: ^1.4.0
       enquirer: ^2.3.6
       ws: ^8.12.0

@@ -8,5 +8,6 @@ export default defineConfig({
   sourcemap: false,
   clean: true,
   treeshake: true,
+  external: ['esnext'],
   minify: true,
 })
