@@ -1,7 +1,7 @@
 {
   "name": "@liou666/live-parser",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "douyin live parser",
   "author": "Liou",
   "license": "MIT",
@@ -29,7 +29,9 @@
   "scripts": {
     "test": "jest",
     "build": "tsup",
-    "dev": "npx tsx index.ts"
+    "dev": "npx tsx index.ts",
+    "release:preview": "standard-version --dry-run",
+    "release": "standard-version && npm publish --access public"
   },
   "dependencies": {
     "@liou666/live-parser-core": "workspace:*",
