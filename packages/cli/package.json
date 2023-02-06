@@ -34,7 +34,7 @@
     "release": "standard-version && npm publish --access public"
   },
   "dependencies": {
-    "@liou666/live-parser-core": "*",
+    "@liou666/live-parser-core": "workspace:^1.0.4",
     "enquirer": "^2.3.6",
     "ws": "^8.12.0"
   },
