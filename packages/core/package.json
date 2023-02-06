@@ -18,7 +18,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup && cp ./src/proto/dy.proto ./dist"
+    "build": "tsup && cp ./src/proto/dy.proto ./dist",
+    "release:preview": "standard-version --dry-run",
+    "release": "standard-version && npm publish --access public"
   },
   "dependencies": {
     "axios": "^1.2.6",

@@ -31,7 +31,7 @@
     "build": "tsup",
     "dev": "npx tsx index.ts",
     "release:preview": "standard-version --dry-run",
-    "release": "standard-version "
+    "release": "standard-version && npm publish --access public"
   },
   "dependencies": {
     "@liou666/live-parser-core": "workspace:*",
