@@ -1,6 +1,6 @@
 import path from 'path'
 import protobuf from 'protobufjs'
-import { getCurrentPath } from '@/utils/tools'
+import { getCurrentPath } from '../../utils/tools'
 
 const { __dirname__ } = getCurrentPath(import.meta.url)
 

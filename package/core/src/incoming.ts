@@ -12,7 +12,8 @@ import {
   RoomUserSeqMessage,
   SocialMessage,
   UpdateFanTicketMessage,
-} from '../proto'
+} from './proto'
+import type { DY } from './proto/dy'
 
 export interface Handles{
   handleChatMessage?: (data: DY.ChatMessage) => DY.ChatMessage
@@ -27,10 +28,10 @@ export interface Handles{
   handleUnknowMessage?: (method: string, data: Buffer) => void
 }
 
-export function heartbeat(ws: WebSocket) {
-  const obj = PushFrame.create({ payloadType: 'hb' })
-  ws.ping(PushFrame.encode(obj).finish())
-}
+// export function heartbeat(ws: WebSocket) {
+//   const obj = PushFrame.create({ payloadType: 'hb' })
+//   ws.ping(PushFrame.encode(obj).finish())
+// }
 
 export async function incoming(data: any, ws: WebSocket, {
   handleChatMessage,

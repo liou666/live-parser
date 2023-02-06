@@ -16,7 +16,7 @@
       ]
     }
   },
-  // "include": ["src"],
+  "include": ["src", "utils"],
   "exclude": [
     "node_modules"
   ]

@@ -1,4 +1,5 @@
-import { heartbeat, incoming, initWsConnect, parseLiveUrl } from './core'
+import { incoming, initWsConnect, parseLiveUrl } from '@liou666/live-parser-core'
+
 import { logger } from './utils'
 
 import {
@@ -25,7 +26,7 @@ const startWebsocket = async (liveId: string) => {
 
   ws.onopen = () => {
     timer = setInterval(() => {
-      heartbeat(ws)
+      // heartbeat(ws)
     }, 10000)
     logger.info('connected')
   }

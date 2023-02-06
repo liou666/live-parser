@@ -1,4 +1,4 @@
-declare namespace DY {
+export declare namespace DY {
 
   /* eslint-disable */
   /** @format */

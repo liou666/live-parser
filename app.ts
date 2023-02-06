@@ -1,4 +1,4 @@
-import startWebsocket from './src'
-import { LIVE_ID } from './src/config'
+import run from '@liou666/live-parser/src/run'
+import { LIVE_ID } from 'config'
 
-startWebsocket(LIVE_ID)
+run(LIVE_ID)

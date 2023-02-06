@@ -1,7 +1,16 @@
-import { logger } from './utils'
-export { default } from './run'
+import enquirer from 'enquirer'
+import { logger } from './src/utils'
+import startWebsocket from './src/run'
+const { prompt } = enquirer
 
-// listen system sign
+const response = await prompt({
+  type: 'input',
+  name: 'liveID',
+  message: '输入抖音直播间ID?',
+}) as any
+
+startWebsocket(response.liveID)
+
 process.on('SIGINT', () => {
   logger.error('Server stopped.')
   process.exit()

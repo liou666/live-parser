@@ -8,15 +8,8 @@
     "strictNullChecks": true,
     "moduleResolution": "Node",
     // "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+    "esModuleInterop": true
   },
-  // "include": ["src"],
   "exclude": [
     "node_modules"
   ]

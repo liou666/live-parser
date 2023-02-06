@@ -1,3 +1,4 @@
+import type { DY } from '@liou666/live-parser-core'
 import { logger } from './utils'
 
 export function handleChatMessage(data: DY.ChatMessage) {

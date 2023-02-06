@@ -10,4 +10,3 @@ export const {
   LIVE_ID, HELLO,
 }
   = envs as Record<string, any>
-
