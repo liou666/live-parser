@@ -21,7 +21,7 @@
   "scripts": {
     "test": "jest",
     "dev": "pnpm -r build && tsx app.ts",
-    "release": "pnpm changeset pre",
+    "release": "pnpm changeset && pnpm changese version",
     "pub": "pnpm -r  publish --access public"
   },
   "dependencies": {
