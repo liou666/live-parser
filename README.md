@@ -5,11 +5,11 @@ Douyin live room scraper by Nodejs
 
 
 ## Installation
-#### [live-parser-cli](/packages/cli/Readme.md)
+#### [live-parser-cli](/packages/cli)
 ```sh
 npm install -g @liou666/live-parser-cli
 ```
-#### [live-parser-core](/packages/core/Readme.md)
+#### [live-parser-core](/packages/core)
 
 ```sh
 npm install -d @liou666/live-parser-core
