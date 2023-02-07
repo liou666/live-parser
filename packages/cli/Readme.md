@@ -1,19 +1,22 @@
-#  📺 Live Parser 
-Douyin live room scraper by Nodejs
+#  📺 Live Parser Cli
+Command line Douyin live room scraper by Nodejs
 
-<!-- [![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url] -->
+[![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url]
 
+
+![](https://t.gmit.vip/2023/02/07/12bqrho.gif
+)
 
 ## Installation
-#### [live-parser-cli](/packages/cli/Readme.md)
+
 ```sh
 npm install -g @liou666/live-parser-cli
 ```
-#### [live-parser-core](/packages/core/Readme.md)
 
-```sh
-npm install -d @liou666/live-parser-core
-```
+
+## Usage
+
+Enter `live-parser-cli` or `dy` on the command line to start the service, and enter the ID of the Douyin live broadcast room when prompted.
 
 ## Development setup
 
@@ -24,17 +27,6 @@ pnpm install
 mv .env_example .env
 pnpm dev
 ```
-
-## RoadMap
-- [x] Parse protobuf
-- [x] Client websocket connect
-- [x] Enhanced type(ts)
-- [ ] Add the voice broadcast feature
-- [ ] Beautify the UI
-- [ ] Build desktop App
-- [ ] Multi-platform Support
-    - [ ] Bilibili
-
 
 ##  Contributing
 
@@ -48,15 +40,16 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
+
 <!-- Markdown link & img dfn's -->
-[npm-url]: https://www.npmjs.com/package/@liou666/live-parser
+[npm-url]: https://www.npmjs.com/package/@liou666/live-parser-cli
 
-[npm-image]: https://img.shields.io/npm/v/@liou666/live-parser.svg
+[npm-image]: https://img.shields.io/npm/v/@liou666/live-parser-cli.svg
 
 
-[node-version]: https://img.shields.io/node/v/@liou666/live-parser
+[node-version]: https://img.shields.io/node/v/@liou666/live-parser-cli
 
-[npm-downloads]: https://img.shields.io/npm/dw/@liou666/live-parser
+[npm-downloads]: https://img.shields.io/npm/dw/@liou666/live-parser-cli
 
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics

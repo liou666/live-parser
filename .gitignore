@@ -15,4 +15,4 @@ yarn-error.log*
 /.vscode
 
 # output
-/dist
+**/dist

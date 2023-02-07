@@ -28,10 +28,10 @@ export interface Handles{
   handleUnknowMessage?: (method: string, data: Buffer) => void
 }
 
-// export function heartbeat(ws: WebSocket) {
-//   const obj = PushFrame.create({ payloadType: 'hb' })
-//   ws.ping(PushFrame.encode(obj).finish())
-// }
+export function heartbeat(ws: WebSocket) {
+  const obj = PushFrame.create({ payloadType: 'hb' })
+  ws.ping(PushFrame.encode(obj).finish())
+}
 
 export async function incoming(data: any, ws: WebSocket, {
   handleChatMessage,

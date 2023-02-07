@@ -1,6 +1,6 @@
 import enquirer from 'enquirer'
+import run from './src/run'
 import { logger } from './src/utils'
-import startWebsocket from './src/run'
 const { prompt } = enquirer
 
 const response = await prompt({
@@ -9,7 +9,7 @@ const response = await prompt({
   message: '输入抖音直播间ID?',
 }) as any
 
-startWebsocket(response.liveID)
+run(response.liveID)
 
 process.on('SIGINT', () => {
   logger.error('Server stopped.')

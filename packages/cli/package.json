@@ -1,8 +1,8 @@
 {
-  "name": "@liou666/live-parser",
+  "name": "@liou666/live-parser-cli",
   "type": "module",
-  "version": "1.2.0",
-  "description": "douyin live parser",
+  "version": "0.1.0",
+  "description": "douyin live parser cli",
   "author": "Liou",
   "license": "MIT",
   "homepage": "https://github.com/liou666/live-parser",
@@ -27,16 +27,11 @@
     "node": ">=16"
   },
   "scripts": {
-    "test": "jest",
-    "build": "tsup",
-    "dev": "npx tsx index.ts"
+    "build": "tsup"
   },
   "dependencies": {
     "@liou666/live-parser-core": "workspace:*",
-    "enquirer": "^2.3.6",
-    "ws": "^8.12.0"
-  },
-  "devDependencies": {
-    "colors": "^1.4.0"
+    "enquirer": "^2.3.6"
   }
+
 }

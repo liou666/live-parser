@@ -1,6 +1,6 @@
 {
   "name": "@liou666/live-parser-core",
-  "version": "1.0.0",
+  "version": "0.1.6",
   "description": "dy live parser core",
   "author": "liou",
   "license": "MIT",
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "axios": "^1.2.6",
-    "protobufjs": "^7.2.0",
-    "ws": "^8.12.0"
+    "protobufjs": "^7.2.0"
   }
 }
