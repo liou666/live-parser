@@ -2,6 +2,7 @@
   "name": "@liou666/live-parser",
   "type": "module",
   "version": "1.2.0",
+  "private": "true",
   "description": "douyin live parser",
   "author": "Liou",
   "license": "MIT",
@@ -21,7 +22,7 @@
   "scripts": {
     "test": "jest",
     "dev": "pnpm -r build && tsx app.ts",
-    "release": "pnpm changeset pre",
+    "release": "pnpm changeset && pnpm changese version",
     "pub": "pnpm -r  publish --access public"
   },
   "dependencies": {
