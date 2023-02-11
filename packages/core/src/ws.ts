@@ -16,12 +16,12 @@ const startWebsocket = async (liveId: string, handlers: Handles) => {
     timer = setInterval(() => {
       heartbeat(ws)
     }, 8000)
-    logger.info('connected')
+    // logger.info('connected')
   }
 
   ws.onclose = () => {
     clearInterval(timer)
-    logger.warn('disconnected')
+    // logger.warn('disconnected')
   }
 
   ws.onerror = err => logger.error(String(err))
