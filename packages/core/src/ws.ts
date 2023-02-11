@@ -24,7 +24,7 @@ const startWebsocket = async (liveId: string, handlers: Handles) => {
     // logger.warn('disconnected')
   }
 
-  ws.onerror = err => logger.error(String(err))
+  ws.onerror = err => logger.error(err.error)
 
   ws.onmessage = data => incoming(data, ws, handlers)
 
