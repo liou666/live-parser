@@ -15,9 +15,10 @@ npm install -g @liou666/live-parser-cli
 
 
 ## Usage
-
-Enter `live-parser-cli` or `dy` on the command line to start the service, and enter the ID of the Douyin live broadcast room when prompted.
-
+```sh
+dy run <room_id>
+# room_id：抖音直播间id
+```
 ## Development setup
 
 ```sh
