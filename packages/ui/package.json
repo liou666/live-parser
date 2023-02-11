@@ -1,0 +1,38 @@
+{
+  "name": "@liou666/live-parser-ui",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "dy live parser temir ui",
+  "author": "liou",
+  "license": "MIT",
+  "homepage": "https://github.com/liou666/live-parser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liou666/live-parser"
+  },
+  "keywords": [
+    "dy",
+    "vue",
+    "temir"
+  ],
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "temir main.ts",
+    "build": "temir build main.ts",
+    "start": "pnpm run build && node dist/main.js"
+  },
+  "dependencies": {
+    "@liou666/live-parser-core": "workspace:*",
+    "@temir/core": "0.0.20",
+    "@temir/tab": "^0.0.20",
+    "axios": "^1.2.6",
+    "dayjs": "^1.11.7",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@temir/cli": "0.0.20"
+  }
+}

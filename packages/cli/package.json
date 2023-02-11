@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@liou666/live-parser-core": "workspace:*",
+    "@liou666/live-parser-ui": "workspace:*",
     "enquirer": "^2.3.6"
   }
 }

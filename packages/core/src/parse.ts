@@ -5,6 +5,12 @@ export interface ParseResult{
   ttwid: string
   liveRoomId: string
   liveRoomTitle: string
+  userId: string
+  nickName: string
+  onlineUserCount: string
+  status: string
+  type?: string
+  subType?: string
 }
 
 export const parseLiveUrl = async (liveId: string): Promise<ParseResult> => {
@@ -25,12 +31,23 @@ export const parseLiveUrl = async (liveId: string): Promise<ParseResult> => {
   const roomStore = fulldata.app.initialState.roomStore
   const liveRoomId = roomStore.roomInfo.roomId
   const liveRoomTitle = roomStore.roomInfo.room.title
-
+  const userId = fulldata.app.odin.user_id
+  const nickName = roomStore.roomInfo.anchor.nickname
+  const onlineUserCount = roomStore.roomInfo.room.room_view_stats?.display_value
+  const status = roomStore.roomInfo.room.status
+  const type = roomStore.roomInfo?.partition_road_map?.partition?.title
+  const subType = roomStore.roomInfo?.partition_road_map?.sub_partition?.partition?.title
   return {
     fulldata,
     ttwid,
     liveRoomId,
+    userId,
+    status,
+    nickName,
+    onlineUserCount,
     liveRoomTitle,
+    type,
+    subType,
   }
 }
 

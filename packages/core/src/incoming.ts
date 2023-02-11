@@ -16,15 +16,15 @@ import {
 import type { DY } from './proto/dy'
 
 export interface Handles{
-  handleChatMessage?: (data: DY.ChatMessage) => DY.ChatMessage | void
-  handleCommonTextMessage?: (data: DY.CommonTextMessage) => DY.CommonTextMessage | void
-  handleGiftMessage?: (data: DY.GiftMessage) => DY.GiftMessage | void
-  handleLikeMessage?: (data: DY.LikeMessage) => DY.LikeMessage | void
-  handleMatchAgainstScoreMessage?: (data: DY.MatchAgainstScoreMessage) => DY.MatchAgainstScoreMessage | void
-  handleMemberMessage?: (data: DY.MemberMessage) => DY.MemberMessage | void
-  handleRoomUserSeqMessage?: (data: DY.RoomUserSeqMessage) => DY.RoomUserSeqMessage | void
-  handleSocialMessage?: (data: DY.SocialMessage) => DY.SocialMessage | void
-  handleUpdateFanTicketMessage?: (data: DY.UpdateFanTicketMessage) => DY.UpdateFanTicketMessage | void
+  handleChatMessage?: (data: DY.ChatMessage) => void
+  handleCommonTextMessage?: (data: DY.CommonTextMessage) => void
+  handleGiftMessage?: (data: DY.GiftMessage) => void
+  handleLikeMessage?: (data: DY.LikeMessage) => void
+  handleMatchAgainstScoreMessage?: (data: DY.MatchAgainstScoreMessage) => void
+  handleMemberMessage?: (data: DY.MemberMessage) => void
+  handleRoomUserSeqMessage?: (data: DY.RoomUserSeqMessage) => void
+  handleSocialMessage?: (data: DY.SocialMessage) => void
+  handleUpdateFanTicketMessage?: (data: DY.UpdateFanTicketMessage) => void
   handleUnknowMessage?: (method: string, data: Buffer) => void
 }
 
