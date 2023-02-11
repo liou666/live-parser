@@ -9,6 +9,7 @@ importers:
       '@liou666/eslint-config-ts': ^1.3.0
       '@liou666/live-parser-cli': workspace:*
       '@liou666/live-parser-core': workspace:*
+      '@liou666/live-parser-ui': workspace:*
       '@types/jest': ^29.2.1
       '@types/node': ^18.11.8
       '@types/ws': ^8.5.4
@@ -25,6 +26,7 @@ importers:
     dependencies:
       '@liou666/live-parser-cli': link:packages/cli
       '@liou666/live-parser-core': link:packages/core
+      '@liou666/live-parser-ui': link:packages/ui
       ws: 8.12.0
     devDependencies:
       '@changesets/changelog-github': 0.4.8
@@ -47,10 +49,12 @@ importers:
     specifiers:
       '@liou666/live-parser-core': workspace:*
       '@liou666/live-parser-ui': workspace:*
+      cac: ^6.7.14
       enquirer: ^2.3.6
     dependencies:
       '@liou666/live-parser-core': link:../core
       '@liou666/live-parser-ui': link:../ui
+      cac: 6.7.14
       enquirer: 2.3.6
 
   packages/core:
@@ -1990,7 +1994,6 @@ packages:
   /cac/6.7.14:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
-    dev: true
 
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}

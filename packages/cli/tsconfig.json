@@ -7,7 +7,7 @@
     "removeComments": true,
     "strictNullChecks": true,
     "moduleResolution": "Node",
-    // "resolveJsonModule": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true
   },
   "exclude": [

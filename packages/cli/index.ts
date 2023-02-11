@@ -1,17 +1,19 @@
-import enquirer from 'enquirer'
+#!/bin/env node
+import { cac } from 'cac'
 import start from '@liou666/live-parser-ui'
-import run from './src/run'
+import { name, version } from './package.json'
 import { logger } from './src/utils'
-const { prompt } = enquirer
-const response = await prompt({
-  type: 'input',
-  name: 'liveID',
-  message: '输入抖音直播间ID?',
-}) as any
 
-// run(response.liveID)
+const cli = cac(name)
 
-start(response.liveID)
+cli
+  .command('run <room_id>', 'Open DY live console Cli')
+  .action(start)
+
+cli.help()
+cli.version(version)
+
+cli.parse()
 
 process.on('SIGINT', () => {
   logger.error('Server stopped.')
