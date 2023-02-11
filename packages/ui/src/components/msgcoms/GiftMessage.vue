@@ -7,9 +7,9 @@ const {msg}= defineProps<{msg:DY.GiftMessage}>()
 </script>
 
 <template>
-	<TBox :flex-grow="1">
+	<TBox :padding-right="1" :flex-grow="1">
 		<UserName :user="msg.user"/>
-		<TBox text-wrap="truncate">
+		<TBox width="100%">
 			<TText wrap="truncate">：{{ `送给主播 ${msg.gift.diamondCount}个${msg.gift.name}`}}</TText>
 		</TBox>
 	</TBox>

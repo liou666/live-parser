@@ -8,9 +8,9 @@ const {msg}= defineProps<{msg:DY.SocialMessage}>()
 </script>
 
 <template>
-	<TBox :flex-grow="1">
+	<TBox :padding-right="1" :flex-grow="1">
 		<UserName :user="msg.user"/>
-		<TBox text-wrap="truncate" >
+		<TBox width="100%" >
 			<TText wrap="truncate">：关注了主播</TText>
 		</TBox>
 	</TBox>

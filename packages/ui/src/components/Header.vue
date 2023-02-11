@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { TBox, TText } from '@temir/core'
+import { TBox, TText, TSpacer } from '@temir/core'
 defineProps<{
 	nickName: string,
 	roomTitle: string,
@@ -10,15 +10,17 @@ defineProps<{
 
 <template>
 	<TBox :height="3" :padding-left="1" border-style="single">
-		<TBox v-if="roomTitle">
-			<TText>
-				<TText dim-color >
-					<TText color="#222" background-color="#f8a5c2" v-if="subType">{{ ` ${subType} ` }}</TText>
-					<TText color="#222" background-color="#1abc9c" v-if="type">{{ ` ${type} ` }}</TText>
+		<TBox display="flex" justify-content="space-between" v-if="roomTitle">
+			<TText wrap="truncate">
+				<TText color="#222" dim-color>
+					<TText background-color="#f8a5c2" v-if="subType">{{ ` ${subType} ` }}</TText>
+					<TText background-color="#1abc9c" v-if="type">{{ ` ${type} ` }}</TText>
 				</TText>
 				<TText bold>{{ ` ${roomTitle} ` }}</TText>
-				<TText >{{ `(${nickName}) ` }}</TText>
 			</TText>
+
+			<TText wrap="truncate">{{ `(${nickName})` }}</TText>
+
 		</TBox>
 	</TBox>
 </template>

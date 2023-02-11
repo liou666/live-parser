@@ -7,9 +7,9 @@ const { msg } = defineProps<{ msg: DY.ChatMessage }>();
 </script>
 
 <template>
-	<TBox :flex-grow="1">
+	<TBox :padding-right="1" :flex-grow="1">
 		<UserName :user="msg.user"/>
-		<TBox text-wrap="truncate" >
+		<TBox width="100%">
 			<TText wrap="truncate-middle">：{{ msg.content }}</TText>
 		</TBox>
 	</TBox>
