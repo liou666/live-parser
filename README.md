@@ -8,6 +8,8 @@ Douyin live room scraper by Nodejs
 #### [live-parser-cli](/packages/cli)
 ```sh
 npm install -g @liou666/live-parser-cli
+
+dy run <room_id>
 ```
 #### [live-parser-core](/packages/core)
 
@@ -30,7 +32,7 @@ pnpm dev
 - [x] Client websocket connect
 - [x] Enhanced type(ts)
 - [ ] Add the voice broadcast feature
-- [ ] Beautify the UI
+- [x] Beautify the UI
 - [ ] Build desktop App
 - [ ] Multi-platform Support
     - [ ] Bilibili
