@@ -3,6 +3,7 @@ Douyin live room scraper by Nodejs
 
 <!-- [![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url] -->
 
+![](./screenshot/screenshot1.gif)
 
 ## Installation
 #### [live-parser-cli](/packages/cli)

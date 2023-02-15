@@ -4,9 +4,7 @@ Command line Douyin live room scraper by Nodejs
 [![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url]
 
 
-![](https://t.gmit.vip/2023/02/07/12bqrho.gif
-)
-
+![](../../screenshot/screenshot1.gif)
 ## Installation
 
 ```sh
