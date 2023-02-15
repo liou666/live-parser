@@ -1,7 +1,7 @@
 {
   "name": "@liou666/live-parser-cli",
   "type": "module",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "douyin live parser cli",
   "author": "Liou",
   "license": "MIT",
