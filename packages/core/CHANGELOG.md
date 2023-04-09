@@ -1,5 +1,11 @@
 # @liou666/live-parser-core
 
+## 0.2.0
+
+### Minor Changes
+
+- verison release
+
 ## 0.1.13
 
 ### Patch Changes
