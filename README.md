@@ -1,24 +1,21 @@
 #  📺 Live Parser 
-Douyin live room scraper by Nodejs
+命令行抖音直播数据抓取工具
 
-<!-- [![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url] -->
+[![NPM Version][npm-image]][npm-url] [![Node Version][node-version]][npm-url] [![Downloads Stats][npm-downloads]][npm-url]
 
 ![](./screenshot/screenshot1.gif)
 
-## Installation
-#### [live-parser-cli](/packages/cli)
+## 使用
+
+> node版本需要>=16 
+
 ```sh
 npm install -g @liou666/live-parser-cli
 
 dy run <room_id>
 ```
-#### [live-parser-core](/packages/core)
 
-```sh
-npm install -d @liou666/live-parser-core
-```
-
-## Development setup
+## 本地启动
 
 ```sh
 git clone https://github.com/liou666/live-parser.git
@@ -28,18 +25,18 @@ mv .env_example .env
 pnpm dev
 ```
 
-## RoadMap
+## 特性
 - [x] Parse protobuf
 - [x] Client websocket connect
 - [x] Enhanced type(ts)
-- [ ] Add the voice broadcast feature
 - [x] Beautify the UI
+- [ ] Add the voice broadcast feature
 - [ ] Build desktop App
 - [ ] Multi-platform Support
     - [ ] Bilibili
 
 
-##  Contributing
+<!-- ##  Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. Any contributions you make are greatly appreciated! 
 
@@ -49,17 +46,17 @@ Don't forget to give the project a star! Thanks again!
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+5. Create a new Pull Request -->
 
 <!-- Markdown link & img dfn's -->
-[npm-url]: https://www.npmjs.com/package/@liou666/live-parser
+[npm-url]: https://www.npmjs.com/package/@liou666/live-parser-cli
 
-[npm-image]: https://img.shields.io/npm/v/@liou666/live-parser.svg
+[npm-image]: https://img.shields.io/npm/v/@liou666/live-parser-cli.svg
 
 
-[node-version]: https://img.shields.io/node/v/@liou666/live-parser
+[node-version]: https://img.shields.io/node/v/@liou666/live-parser-cli
 
-[npm-downloads]: https://img.shields.io/npm/dw/@liou666/live-parser
+[npm-downloads]: https://img.shields.io/npm/dw/@liou666/live-parser-cli
 
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
