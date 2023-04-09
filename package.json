@@ -23,7 +23,7 @@
     "build": "pnpm -r build ",
     "dev": "pnpm build && temir app.ts",
     "release": "pnpm changeset && pnpm changeset version",
-    "pub": "pnpm -r  publish --access public"
+    "pub": "pnpm build && pnpm -r publish --access public --no-git-check"
   },
   "dependencies": {
     "@liou666/live-parser-cli": "workspace:*",
