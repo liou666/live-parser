@@ -22,7 +22,7 @@
   "scripts": {
     "build": "pnpm -r build ",
     "dev": "pnpm build && temir app.ts",
-    "release": "pnpm changeset && pnpm changese version",
+    "release": "pnpm changeset && pnpm changeset version",
     "pub": "pnpm -r  publish --access public"
   },
   "dependencies": {

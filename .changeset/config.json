@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-        "repo": "https://github.com/liou666/live-parser" 
+        "repo": "liou666/live-parser" 
     }
 ],
   "commit": false,
