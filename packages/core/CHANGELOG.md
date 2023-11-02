@@ -1,5 +1,11 @@
 # @liou666/live-parser-core
 
+## 0.2.1
+
+### Patch Changes
+
+- 解析方法更新
+
 ## 0.2.0
 
 ### Minor Changes

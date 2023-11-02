@@ -1,5 +1,13 @@
 # @liou666/live-parser-cli
 
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @liou666/live-parser-core@0.2.1
+  - @liou666/live-parser-ui@0.3.1
+
 ## 0.4.0
 
 ### Minor Changes
