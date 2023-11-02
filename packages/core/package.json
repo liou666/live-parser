@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "axios": "^1.2.6",
+    "cheerio": "1.0.0-rc.12",
+    "parse-json": "^7.1.1",
     "protobufjs": "^7.2.0"
   }
 }

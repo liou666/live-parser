@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+import * as cheerio from 'cheerio'
+import parseJson from 'parse-json'
 export interface ParseResult{
   fulldata: any
   ttwid: string
@@ -25,13 +26,17 @@ export const parseLiveUrl = async (liveId: string): Promise<ParseResult> => {
   const cookie = res.headers['set-cookie']![0]
   const ttwid = [...cookie.matchAll(/ttwid=(.+?);/g)][0][1]
 
-  const basedata = [...res.data.matchAll(/script id=\"RENDER_DATA\" type=\"application\/json\"\>(.*?)\<\/script\>/g)][0][1]
-  const fulldata = JSON.parse(decodeURIComponent(basedata))
+  const $ = cheerio.load(res.data)
+  const text = $('script')[$('script').length - 2].children[0] as any
+  const target = text.data.slice(19, -1)
+  const fulldata = parseJson((parseJson(target)[1] as any).slice(2))[3] as any
 
-  const roomStore = fulldata.app.initialState.roomStore
+  const roomStore = fulldata.state.roomStore
+  const userStore = fulldata.state.userStore
+
   const liveRoomId = roomStore.roomInfo.roomId
   const liveRoomTitle = roomStore.roomInfo.room.title
-  const userId = fulldata.app.odin.user_id
+  const userId = userStore.odin.user_id
   const nickName = roomStore.roomInfo.anchor.nickname
   const onlineUserCount = roomStore.roomInfo.room.room_view_stats?.display_value
   const status = roomStore.roomInfo.room.status
