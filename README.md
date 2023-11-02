@@ -61,3 +61,5 @@ Don't forget to give the project a star! Thanks again!
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 
+## 免责声明
+本项目仅用于学习交流使用，禁止一切非法滥用，否则后果自负。
